@@ -3,7 +3,7 @@
    - Usage: include on any page; functions will gracefully skip missing elements
 */
 
-const API_BASE_URL = 'https://kakebe.tech'; // change to deployed URL when needed
+const API_BASE_URL = 'http://localhost:1337'; // change to deployed URL when needed
 
 /* ---------- CONFIG ---------- */
 const CACHE_ENABLED = true;        // set false to disable caching
@@ -826,7 +826,7 @@ function populateTestimonials() {
       icon1.classList.add('icon1');
 
       const img = document.createElement('img');
-      img.src = 'assets/img/icon1s/tes2-icon1.png';
+      img.src = 'assets/img/icons/tes2-icon.png';
       img.alt = 'Testimonial Icon1';
       icon1.appendChild(img);
       singleSlider.appendChild(icon1);
@@ -985,7 +985,7 @@ function populateServices() {
 
       services.forEach(svcRaw => {
         const info = svcRaw.attributes ? { id: svcRaw.id, ...svcRaw.attributes } : svcRaw;
-        const icon1Url = getImageUrl(info.icon1) || `${API_BASE_URL}/uploads/default_icon1.png`;
+        const icon1Url = getImageUrl(info.icon1) || `${API_BASE_URL}/uploads/default_icon.png`;
         const desc = info.description || '';
 
         const serve = document.createElement('div');
