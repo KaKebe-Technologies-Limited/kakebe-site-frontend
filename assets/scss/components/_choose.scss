@@ -1,0 +1,136 @@
+@use '../utils' as *;
+
+  /*
+ ::::::::::::::::::::::::::
+  CHOOSE AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+// --- choose style 8 ---
+
+.choose8 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    background-color: #0B0103;
+    z-index: -3;
+    @media #{$md} {
+      width: 100%;
+    }
+    @media #{$xs} {
+      width: 100%;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+    background-color: #4D32A5;
+    z-index: -3;
+    @media #{$md} {
+      width: 0%;
+    }
+    @media #{$xs} {
+      width: 0%;
+    }
+  }
+  .heading6-w {
+    padding-left: 40px;
+    @media #{$md} {
+      padding-left: 0px;
+      padding-top: 30px;
+    }
+    @media #{$xs} {
+      padding-left: 0px;
+      padding-top: 30px;
+    }
+  }
+
+  .choose8-images {
+    position: relative;
+
+    .shape {
+      background-color: #fff;
+      padding: 24px 32px;
+      border-radius: 4px;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      bottom: 150px;
+      right: 0;
+      h5 {
+        color: #4D32A5;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; /* 100% */
+      }
+      p {
+        color: var(--Home-Page-2-paragraph, #5A5556);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 100% */
+        padding-top: 12px;
+      }
+    }
+  }
+
+  .choose-box {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 20px 24px;
+    margin-top: 20px;
+    transition: all .4s;
+    .icon {
+      width: 130px;
+      img {
+        transition: all .4s;
+      }
+    }
+    .heading {
+      padding-left: 30px;
+      h4 {
+        a {
+          display: inline-block;
+          color: var(--White-colors, #FFF);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px; /* 100% */
+        }
+      }
+    }
+
+    &:hover {
+      transition: all .4s;
+      transform: translateY(-10px);
+
+      .icon {
+        img {
+          transform: rotateY(180deg);
+          transition: all .4s;
+        }
+      }
+    }
+  }
+}
+
+// --- choose style 8 ---
+
+/*
+ ::::::::::::::::::::::::::
+  CHOOSE AREA CSS
+ ::::::::::::::::::::::::::
+ */

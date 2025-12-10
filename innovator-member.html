@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="member-title">Loading... | Kakebe Innovators</title>
+
+    <!--=====FAVICON=======-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/logo/site.webmanifest">
+
+    <!--=====CSS=======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      .member-header {
+        background: linear-gradient(135deg, #ff0000, #cc0000);
+        color: white;
+        padding: 4rem 0;
+      }
+      #member-content {
+        margin-top: 100px;
+      }
+      .skill-bar {
+        height: 8px;
+        background: #fee;
+        border-radius: 4px;
+      }
+      .skill-fill {
+        height: 100%;
+        background: #ff0000;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header id="header">
+      <div class="header-inner shadow">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img
+                src="assets/img/logo/logo.png"
+                alt="Logo"
+                class="logo-img me-2"
+              />
+            </a>
+
+            <!-- Desktop Nav (only visible on large screens) -->
+            <ul
+              class="navbar-nav nav-links d-none d-lg-flex justify-content-center flex-grow-1 gap-4"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#service"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="team.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="innovators.html"
+                  >Innovators</a
+                >
+              </li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <a class="theme-btn16 d-none d-lg-block" href="contact.html"
+              >Get in Touch
+              <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span
+              ><span class="arrow2"
+                ><i class="fa-solid fa-arrow-right"></i></span
+            ></a>
+
+            <!-- Mobile Toggle -->
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Nav: Only visible below lg -->
+          <div class="collapse d-lg-none w-100" id="mobileNav">
+            <ul
+              class="navbar-nav mt-3 justify-content-center align-items-center text-center mx-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="innovators.html">Innovators</a>
+              </li>
+              <li class="nav-item">
+                <a class="theme-btn16 mt-2" href="index.html#contact"
+                  >Get in Touch ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="member-content" class="container py-5">
+      <div class="text-center">
+        <div
+          class="spinner-border text-danger"
+          style="width: 3rem; height: 3rem"
+        ></div>
+      </div>
+    </div>
+
+    <!--===== FOOTER AREA START =======-->
+    <div class="footer2 _relative" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single-footer-items footer-logo-area">
+              <div class="footer-logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo.png"
+                    alt="Kakebe Technologies"
+                /></a>
+              </div>
+              <div class="space20"></div>
+              <div class="heading2">
+                <p>
+                  Kakebe Technologies is a youth-led IT company transforming
+                  Northern Uganda through innovative digital solutions and youth
+                  empowerment.
+                </p>
+              </div>
+              <ul class="social-icon">
+                <li>
+                  <a href="https://www.linkedin.com/company/kakebe-technologies"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/kakebetech"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/KaKebeTechnologies"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Our Services</h3>
+              <ul class="menu-list">
+                <li><a href="index.html#service">Software Development</a></li>
+                <li><a href="index.html#service">Digital Marketing</a></li>
+                <li><a href="index.html#service">Robotics & AI</a></li>
+                <li><a href="index.html#service">Cybersecurity</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items pl-5">
+              <h3>Useful Links</h3>
+              <ul class="menu-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Contact Us</h3>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon1.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="phone"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                  <!-- <img src="assets/img/icons/footer1-icon2.png" alt="" /> -->
+                </div>
+                <div class="pera">
+                  <a id="whatsapp"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon3.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="contact-email"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon4.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="website"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space70"></div>
+      </div>
+      <div class="copyright-area _relative">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <div class="copyright">
+                <p>
+                  Copyright @<span id="year"></span> Kakebe Technologies. All
+                  Rights Reserved
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="copyright right-area">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+    <!--===== FOOTER AREA END =======-->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(location.search);
+        const innovatorName = params.get("innovator");
+        const memberName = params.get("member");
+
+        if (!innovatorName || !memberName) {
+          getEl("member-content").innerHTML = "<h2>Invalid URL</h2>";
+          return;
+        }
+
+        const decodedMember = memberName.replace(/-/g, " ");
+        const encodedInnovator = encodeURIComponent(
+          innovatorName.replace(/-/g, " ")
+        );
+
+        // Fetch full innovator to get member data
+        safeFetch(
+          `${API_BASE_URL}/api/innovators?filters[name][$eqi]=${encodedInnovator}&populate=teamMembers.avatar`
+        )
+          .then((res) => {
+            const member = res.data[0].teamMembers.find(
+              (m) => m.name.toLowerCase() === decodedMember.toLowerCase()
+            );
+
+            if (!member) throw new Error("Member not found");
+
+            document.getElementById(
+              "member-title"
+            ).textContent = `${member.name} | ${res.data[0].name}`;
+
+            getEl("member-content").innerHTML = `
+            <div class="member-header text-center">
+              <div class="container">
+                <img src="${
+                  getImageUrl(member.avatar, "large") ||
+                  "assets/img/default-avatar.jpg"
+                }" 
+                     class="rounded-circle shadow-lg" width="150" height="150" style="object-fit:cover; border:8px solid rgba(255,255,255,0.3)">
+                <h1 class="mt-4 display-5">${member.name}</h1>
+                <p class="lead opacity-90">${member.role || "Innovator"}</p>
+                <a href="innovator.html?name=${innovatorName}" class="theme-btn2">← Back to Project</a>
+              </div>
+            </div>
+
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <div class="bg-white p-5 rounded-4 shadow">
+                    <h3>About ${member.name.split(" ")[0]}</h3>
+                    <p class="lead">${
+                      member.bio ||
+                      "Passionate young innovator from Northern Uganda, driving change through technology and creativity."
+                    }</p>
+                    
+                    ${
+                      member.skills
+                        ? `
+                      <h5 class="mt-4">Skills</h5>
+                      ${member.skills
+                        .split(",")
+                        .map(
+                          (s) => `
+                        <div class="mb-2">
+                          <div class="d-flex justify-content-between small"><span>${s.trim()}</span><span>85%</span></div>
+                          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                        </div>
+                      `
+                        )
+                        .join("")}
+                    `
+                        : ""
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+          })
+          .catch(() => {
+            getEl(
+              "member-content"
+            ).innerHTML = `<h2>Member Not Found</h2><a href="innovators.html">← All Innovators</a>`;
+          });
+      });
+    </script>
+  </body>
+</html>

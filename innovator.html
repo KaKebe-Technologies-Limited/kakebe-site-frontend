@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Loading... | Kakebe Innovators</title>
+
+    <!-- Preload Critical CSS -->
+    <link
+      rel="preload"
+      href="assets/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="assets/css/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- GLightbox CSS -->
+    <link rel="preload" href="assets/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+
+    <!--=====FAVICON=======-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/logo/site.webmanifest">
+
+    <!--=====CSS=======-->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+      :root {
+        --primary: #ff0000;
+        --dark: #0f172a;
+        --light: #f8fafc;
+      }
+      .innovator-hero {
+        background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+        color: white;
+        padding: 5rem 0 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+      #innovator-content {
+        margin-top: 150px;
+      }
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle at 20% 80%,
+          rgba(255, 0, 0, 0.1),
+          transparent 50%
+        );
+        pointer-events: none;
+      }
+      .member-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .member-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+      }
+      .member-avatar {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 4px solid white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .gallery-grid img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        cursor: zoom-in;
+        transition: transform 0.3s;
+      }
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+      }
+      .progress {
+        height: 10px;
+        border-radius: 5px;
+      }
+      .back-btn {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+      .back-btn:hover {
+        background: white;
+        color: var(--dark);
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header id="header">
+      <div class="header-inner shadow">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img
+                src="assets/img/logo/logo.png"
+                alt="Logo"
+                class="logo-img me-2"
+              />
+            </a>
+
+            <!-- Desktop Nav (only visible on large screens) -->
+            <ul
+              class="navbar-nav nav-links d-none d-lg-flex justify-content-center flex-grow-1 gap-4"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#service"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="team.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="innovators.html"
+                  >Innovators</a
+                >
+              </li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <a class="theme-btn16 d-none d-lg-block" href="contact.html"
+              >Get in Touch
+              <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span
+              ><span class="arrow2"
+                ><i class="fa-solid fa-arrow-right"></i></span
+            ></a>
+
+            <!-- Mobile Toggle -->
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Nav: Only visible below lg -->
+          <div class="collapse d-lg-none w-100" id="mobileNav">
+            <ul
+              class="navbar-nav mt-3 justify-content-center align-items-center text-center mx-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="innovators.html">Innovators</a>
+              </li>
+              <li class="nav-item">
+                <a class="theme-btn16 mt-2" href="index.html#contact"
+                  >Get in Touch ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="innovator-content" class="min-vh-100">
+      <div class="text-center py-5">
+        <div
+          class="spinner-border text-danger"
+          style="width: 4rem; height: 4rem"
+        ></div>
+        <p class="mt-3 text-muted">Loading innovator...</p>
+      </div>
+    </main>
+
+    <!--===== FOOTER AREA START =======-->
+    <div class="footer2 _relative" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single-footer-items footer-logo-area">
+              <div class="footer-logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo.png"
+                    alt="Kakebe Technologies"
+                /></a>
+              </div>
+              <div class="space20"></div>
+              <div class="heading2">
+                <p>
+                  Kakebe Technologies is a youth-led IT company transforming
+                  Northern Uganda through innovative digital solutions and youth
+                  empowerment.
+                </p>
+              </div>
+              <ul class="social-icon">
+                <li>
+                  <a href="https://www.linkedin.com/company/kakebe-technologies"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/kakebetech"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/KaKebeTechnologies"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Our Services</h3>
+              <ul class="menu-list">
+                <li><a href="index.html#service">Software Development</a></li>
+                <li><a href="index.html#service">Digital Marketing</a></li>
+                <li><a href="index.html#service">Robotics & AI</a></li>
+                <li><a href="index.html#service">Cybersecurity</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items pl-5">
+              <h3>Useful Links</h3>
+              <ul class="menu-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Contact Us</h3>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon1.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="phone"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                  <!-- <img src="assets/img/icons/footer1-icon2.png" alt="" /> -->
+                </div>
+                <div class="pera">
+                  <a id="whatsapp"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon3.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="contact-email"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon4.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="website"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space70"></div>
+      </div>
+      <div class="copyright-area _relative">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <div class="copyright">
+                <p>
+                  Copyright @<span id="year"></span> Kakebe Technologies. All
+                  Rights Reserved
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="copyright right-area">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+    <!--===== FOOTER AREA END =======-->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(location.search);
+        const nameParam = params.get("name");
+        const memberParam = params.get("member");
+
+        if (!nameParam) {
+          getEl(
+            "innovator-content"
+          ).innerHTML = `<div class="container py-5 text-center"><h2>No Project Selected</h2><a href="innovators.html" class="theme-btn2 btn-lg">← All Innovators</a></div>`;
+          return;
+        }
+
+        if (memberParam) {
+          location.href = `innovator-member.html?innovator=${nameParam}&member=${memberParam}`;
+          return;
+        }
+
+        const encoded = encodeURIComponent(nameParam.replace(/-/g, " "));
+        const url = `${API_BASE_URL}/api/innovators?filters[name][$eqi]=${encoded}&populate=*`;
+
+        safeFetch(url, { cacheKey: `innovator_${encoded}` })
+          .then((res) => {
+            if (!res?.data?.[0]) throw new Error("Not found");
+            const inv = res.data[0];
+            document.getElementById(
+              "page-title"
+            ).textContent = `${inv.name} | Kakebe Innovators`;
+
+            getEl("innovator-content").innerHTML = `
+            <div class="innovator-hero position-relative">
+              <div class="hero-bg"></div>
+              <div class="container position-relative">
+                <div class="text-center">
+                  <h1 class="display-4 fw-bold mb-3">${inv.name}</h1>
+                  <p class="lead opacity-90 col-lg-8 mx-auto">${
+                    inv.tagline ||
+                    "Transforming Northern Uganda through youth innovation"
+                  }</p>
+                  <a href="innovators.html" class="theme-btn2 back-btn px-4 py-2 mt-3">← All Innovators</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="container py-5">
+              <div class="row g-5">
+                <div class="col-lg-8">
+                  <img src="${
+                    getImageUrl(inv.image, "large") ||
+                    "assets/img/innovators-placeholder.jpg"
+                  }" 
+                       class="img-fluid rounded-4 shadow-lg w-100" alt="${
+                         inv.name
+                       }">
+                  
+                  <div class="mt-5 bg-white p-5 rounded-4 shadow">
+                    <h3>About the Project</h3>
+                    <div id="about-project" class="lead"></div>
+                  </div>
+
+                  ${
+                    inv.gallery?.length
+                      ? `
+                    <div class="mt-5">
+                      <h3>Gallery</h3>
+                      <div class="gallery-grid row g-3">
+                        ${inv.gallery
+                          .map(
+                            (g, idx) => `
+                          <div class="col-6 col-md-4">
+                            <a href="${getImageUrl(g.image, "large") || getImageUrl(g.image, "medium")}" 
+                               class="glightbox glightbox-innovator" 
+                               data-gallery="innovator-gallery-${encodeURIComponent(inv.name || 'project')}">
+                              <img src="${getImageUrl(g.image, "medium")}" 
+                                   class="w-100 shadow-sm" 
+                                   loading="lazy" 
+                                   alt="Project gallery image ${idx + 1}">
+                            </a>
+                          </div>
+                        `
+                          )
+                          .join("")}
+                      </div>
+                    </div>
+                  `
+                      : ""
+                  }
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="bg-white rounded-4 shadow p-4 sticky-top" style="top:100px;">
+                    <h4>Project Status</h4>
+                    <hr>
+                    <p><strong>Stage:</strong> <span class="badge bg-success fs-6">${
+                      inv.stage || "Beginner"
+                    }</span></p>
+                    <p><strong>Maturity:</strong> ${inv.maturity || 0}%</p>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" style="width:${
+                        inv.maturity || 0
+                      }%"></div>
+                    </div>
+                    <a href="mailto:service@kakebe.tech?subject=Interest in ${encodeURIComponent(
+                      inv.name
+                    )}" 
+                       class="theme-btn2 w-100 py-3 fw-bold text-center">Partner With Us</a>
+                  </div>
+
+                  <div class="mt-4 bg-white rounded-4 shadow p-4">
+                    <h4>Meet the Team</h4>
+                    ${
+                      inv.teamMembers?.length
+                        ? inv.teamMembers
+                            .map(
+                              (m) => `
+                      <div class="d-flex align-items-center mb-3 p-3 rounded-3 hover-shadow" 
+                           style="cursor:pointer; transition:0.3s;"
+                           onclick="location.href='innovator-member.html?innovator=${nameParam}&member=${encodeURIComponent(
+                                m.name.replace(/\s+/g, "-").toLowerCase()
+                              )}'">
+                        <img src="${
+                          getImageUrl(m.avatar, "small") ||
+                          "assets/img/default-avatar.jpg"
+                        }" 
+                             class="rounded-circle member-avatar me-3" alt="${
+                               m.name
+                             }">
+                        <div>
+                          <h6 class="mb-0">${m.name}</h6>
+                          <small class="text-muted">${
+                            m.role || "Team Member"
+                          }</small>
+                        </div>
+                      </div>
+                    `
+                            )
+                            .join("")
+                        : '<p class="text-muted">Team coming soon!</p>'
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+          // Safely render rich text into the placeholder
+          const descHolder = document.getElementById('about-project');
+          if (descHolder) {
+            // use the safe renderer which returns nodes and appends them
+            injectRichText(descHolder, inv.description || []);
+
+            // If AOS is loaded, refresh so it registers newly injected elements
+            try {
+              if (window.AOS && typeof window.AOS.refresh === 'function') {
+                // prefer refresh, and try refreshHard if available
+                window.AOS.refresh();
+                if (typeof window.AOS.refreshHard === 'function') window.AOS.refreshHard();
+              } else {
+                // Fallback: AOS didn't initialize (or isn't present). Many AOS styles keep
+                // elements at opacity:0 until the `aos-animate` class is added. Add it
+                // to any newly injected [data-aos] elements so they become visible.
+                setTimeout(() => {
+                  const nodes = descHolder.querySelectorAll('[data-aos]');
+                  nodes.forEach(n => n.classList.add('aos-animate'));
+                }, 20);
+              }
+            } catch (e) {
+              // On any error, apply the simple fallback to ensure content is visible
+              const nodes = descHolder.querySelectorAll('[data-aos]');
+              nodes.forEach(n => n.classList.add('aos-animate'));
+            }
+          }
+
+          // Initialize GLightbox for the project gallery (if GLightbox is available)
+          try {
+            setTimeout(() => {
+              // prefer the global GLightbox factory if present
+              if (typeof GLightbox === 'function' || window.GLightbox) {
+                // create a gallery instance scoped to this page's gallery selector
+                // using the classname we added above
+                try {
+                  GLightbox({ selector: '.glightbox-innovator' });
+                } catch (e) {
+                  // some builds expose GLightbox under window.GLightbox
+                  if (window.GLightbox && typeof window.GLightbox === 'function') {
+                    window.GLightbox({ selector: '.glightbox-innovator' });
+                  }
+                }
+              }
+            }, 120);
+          } catch (e) {
+            // ignore
+          }
+          })
+          .catch((err) => {
+            console.error('Error loading content: ', err);
+            getEl("innovator-content").innerHTML = `
+            <div class="container py-5 text-center">
+              <h2>Project Not Found</h2>
+              <p>We couldn't find this innovator project.</p>
+              <a href="innovators.html" class="theme-btn16">← All Innovators</a>
+            </div>`;
+          });
+      });
+    </script>
+  </body>
+</html>

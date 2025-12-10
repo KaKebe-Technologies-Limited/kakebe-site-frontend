@@ -1,0 +1,632 @@
+@use '../utils' as *;
+
+  /*
+ ::::::::::::::::::::::::::
+  CTA AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+ // === cta sytle 1 ===
+
+ .cta {
+  background-color: var(--ztc-bg-main-bg-1);
+  padding: 80px 0px;
+
+  .buttons {
+    text-align: end;
+
+    @media #{$md} {
+      text-align: start;
+      margin-top: 20px;
+    }
+
+    @media #{$xs} {
+      text-align: start;
+      margin-top: 20px;
+    }
+  }
+ }
+
+ // === cta sytle 1 ===
+
+ // === cta sytle 2 ===
+
+ .cta2 {
+  .subscribe-form {
+    position: relative;
+    padding-right: 160px;
+    margin-top: 32px;
+
+    input {
+      padding: 12px 18px 13px 18px;
+      border-radius: 25px;
+      border: none;
+      width: 100%;
+      margin-right: 130px;
+      background-color: var(--ztc-bg-bg-2);
+      border: 1px solid var(--ztc-bg-bg-3);
+      color: var(--ztc-bg-bg-5);
+
+      &::placeholder {
+        color: #C7C6CB;
+      }
+      &:focus {
+        outline-color: #A1E934;
+        outline-width: 1px;
+        outline-style: solid;
+      }
+    }
+
+    .button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+ }
+
+ // === cta sytle 2 ===
+
+ // === cta sytle 3 ===
+
+ .cta3 {
+  padding-top: 100px;
+
+  @media #{$md} {
+    padding-top: 50px;
+  }
+
+  @media #{$xs} {
+    padding-top: 50px;
+  }
+  
+  .subscribe-form {
+    position: relative;
+    padding-right: 160px;
+    margin-top: 32px;
+
+    input {
+      padding: 14px 18px 14px 18px;
+      border-radius: 4px;
+      border: none;
+      width: 100%;
+      margin-right: 130px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+ }
+
+ // === cta sytle 3 ===
+ 
+ // === cta sytle 4 ===
+
+ .cta-bg-area {
+  background-color: var(--ztc-text-text-1);
+  padding: 60px 30px;
+  position: relative;
+  border-radius: 7px;
+  margin-bottom: 100px;
+
+  
+  @media #{$md} {
+    margin-bottom: 50px;
+  }
+
+  @media #{$xs} {
+    margin-bottom: 50px;
+  }
+
+  .subscribe-form {
+    position: relative;
+    margin-top: 30px;
+
+    input {
+      background-color: #313234;
+      border-radius: 56px;
+      border: none;
+      padding: 17px 24px;
+      color: #fff;
+
+
+      &::placeholder {
+        color: #D6D6D6;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button {
+      position: absolute;
+      right: -16px;
+      top: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-image: url(../img/others/cta4-image.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    border-radius: 4px;
+
+    @media #{$xs} {
+      width: 0%;
+    }
+  }
+
+  .shape1 {
+    position: absolute;
+    right: 50%;
+    z-index: 3;
+    top: 100px;
+    margin-right: -50px;
+
+    @media #{$md} {
+      display: none;
+    }
+    @media #{$xs} {
+      display: none;
+    }
+  }
+  .shape2 {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 3;
+  }
+ }
+
+ // === cta sytle 4 ===
+
+ // === cta sytle 5 ===
+
+ .cta5 {
+  margin-bottom: -100px;
+  position: relative;
+  z-index: 1;
+  @media #{$md} {
+    margin-bottom: 0px;
+  }
+  @media #{$xs} {
+    margin-bottom: 0px;
+  }
+  .bg {
+    border-radius: 4px;
+    background: linear-gradient(90deg, #3B32F6 0%, #49A6FF 100%);
+    padding: 60px 48px;
+
+    @media #{$xs} {
+      padding: 32px;
+    }
+
+    .form-area {
+      position: relative;
+      text-align: end;
+      input {
+        padding: 21px;
+        border: none;
+        background: #fff;
+        border-radius: 4px;
+        width: 70%;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: var(--Home-Page-4-paragraph, #5A5D73);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px; /* 100% */
+        }
+
+        @media #{$md} {
+          width: 100%;
+        }
+
+        @media #{$xs} {
+          width: 100%;
+        }
+      }
+      .button {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+      }
+
+      @media #{$md} {
+        margin-top: 30px;
+      }
+      @media #{$xs} {
+        margin-top: 30px;
+      }
+    }
+  }
+ }
+
+ // === cta sytle 5 ===
+
+  // === cta sytle 6 ===
+
+  .cta6 {
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+    @media #{$md} {
+      margin-bottom: 0px;
+    }
+    @media #{$xs} {
+      margin-bottom: 0px;
+    }
+    .bg {
+      border-radius: 4px;
+      background: #FA6444;
+      padding: 60px 48px;
+  
+      @media #{$xs} {
+        padding: 32px;
+      }
+  
+      .form-area {
+        position: relative;
+        text-align: end;
+        input {
+          padding: 19px;
+          border: none;
+          background: #fff;
+          border-radius: 4px;
+          width: 70%;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: var(--Home-Page-4-paragraph, #5A5D73);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 100% */
+          }
+  
+          @media #{$md} {
+            width: 100%;
+          }
+  
+          @media #{$xs} {
+            width: 100%;
+          }
+        }
+        .button {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+        }
+  
+        @media #{$md} {
+          margin-top: 30px;
+        }
+        @media #{$xs} {
+          margin-top: 30px;
+        }
+      }
+    }
+   }
+  
+   // === cta sytle 6 ===
+
+  // === cta sytle 7 ===
+
+  .cta7 {
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+    @media #{$md} {
+      margin-bottom: 0px;
+    }
+    @media #{$xs} {
+      margin-bottom: 0px;
+    }
+    .bg {
+      border-radius: 4px;
+      background: #307FFF;
+      padding: 60px 48px;
+  
+      @media #{$xs} {
+        padding: 32px;
+      }
+  
+      .form-area {
+        position: relative;
+        text-align: end;
+        input {
+          padding: 19px;
+          border: none;
+          background: #fff;
+          border-radius: 111px;
+          width: 70%;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: var(--Home-Page-4-paragraph, #5A5D73);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 100% */
+          }
+  
+          @media #{$md} {
+            width: 100%;
+          }
+  
+          @media #{$xs} {
+            width: 100%;
+          }
+        }
+        .button {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+        }
+  
+        @media #{$md} {
+          margin-top: 30px;
+        }
+        @media #{$xs} {
+          margin-top: 30px;
+        }
+      }
+    }
+   }
+  
+   // === cta sytle 7 ===
+
+
+     // === cta sytle 8 ===
+
+  .cta8 {
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+    @media #{$md} {
+      margin-bottom: 0px;
+    }
+    @media #{$xs} {
+      margin-bottom: 0px;
+    }
+    .bg {
+      border-radius: 4px;
+      background: #4D32A5;
+      padding: 60px 48px;
+  
+      @media #{$xs} {
+        padding: 32px;
+      }
+  
+      .form-area {
+        position: relative;
+        text-align: end;
+        input {
+          padding: 19px;
+          border: none;
+          background: #fff;
+          border-radius: 4px;
+          width: 70%;
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: var(--Home-Page-4-paragraph, #5A5D73);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 100% */
+          }
+  
+          @media #{$md} {
+            width: 100%;
+          }
+  
+          @media #{$xs} {
+            width: 100%;
+          }
+        }
+        .button {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+        }
+  
+        @media #{$md} {
+          margin-top: 30px;
+        }
+        @media #{$xs} {
+          margin-top: 30px;
+        }
+      }
+    }
+   }
+  
+   // === cta sytle 8 ===
+
+   // === cta sytle 9 ===
+
+   .cta9 {
+    background-color: #325D28;
+
+    .images {
+      text-align: end;
+      position: relative;
+
+      .img1 {
+        position: absolute;
+        top: 60px;
+        right: 0;
+      }
+
+      .img2 {
+        position: absolute;
+        top: 0;
+        right: 80px;
+      }
+    }
+
+    .heading6-w {
+      padding: 60px 0px;
+
+      .form-area {
+        position: relative;
+        margin-top: 30px;
+        margin-right: 40px;
+
+        @media #{$md} {
+          margin-right: 0;
+        }
+
+        @media #{$xs} {
+          margin-right: 0;
+        }
+
+        .button {
+          position: absolute;
+          bottom: 3px;
+          right: 3px;
+        }
+
+        input {
+          width: 100%;
+          border-radius: 111px;
+          border: none;
+          padding: 18px;
+
+          &:focus {
+            outline: none;
+          }
+          &::placeholder {
+            color: var(--Paragraph-Color, #646375);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 100% */
+          }
+        }
+      }
+    }
+   }
+
+   // === cta sytle 9 ===
+
+
+  // === cta sytle 10 ===
+
+  .cta10 {
+    .cta-bg-area {
+      background-color: #24908D;
+      padding: 60px 30px;
+      position: relative;
+      border-radius: 7px;
+      margin-bottom: 100px;
+    
+      
+      @media #{$md} {
+        margin-bottom: 50px;
+      }
+    
+      @media #{$xs} {
+        margin-bottom: 50px;
+      }
+    
+      .subscribe-form {
+        position: relative;
+        margin-top: 30px;
+    
+        input {
+          background-color: #ffffff17;
+          border-radius: 8px;
+          border: none;
+          padding: 17px 24px;
+          color: #fff;
+    
+    
+          &::placeholder {
+            color: #ffffff8f;
+          }
+    
+          &:focus {
+            outline: none;
+          }
+        }
+    
+        .button {
+          position: absolute;
+          right: -16px;
+          top: 0;
+        }
+      }
+    
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 50%;
+        background-image: url(../img/others/cta4-image.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 1;
+        border-radius: 4px;
+    
+        @media #{$xs} {
+          width: 0%;
+        }
+      }
+    
+      .shape1 {
+        position: absolute;
+        right: 50%;
+        z-index: 3;
+        top: 100px;
+        margin-right: -50px;
+    
+        @media #{$md} {
+          display: none;
+        }
+        @media #{$xs} {
+          display: none;
+        }
+      }
+      .shape2 {
+        position: absolute;
+        right: -100px;
+        top: -100px;
+        z-index: 3;
+      }
+     }
+  }
+
+ // === cta sytle 10 ===
+
+
+   /*
+ ::::::::::::::::::::::::::
+  CTA AREA CSS
+ ::::::::::::::::::::::::::
+ */

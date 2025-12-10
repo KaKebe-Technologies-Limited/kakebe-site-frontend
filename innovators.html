@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Innovators Database | Kakebe Technologies Ltd – Lira City, Northern Uganda
+    </title>
+
+    <!--=====FAVICON=======-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/logo/site.webmanifest">
+
+    <!--=====META DESCRIPTION=======-->
+    <meta
+      name="description"
+      content="Discover the Innovators Database by Kakebe Technologies Ltd — showcasing talented young innovators from Lango and Northern Uganda, based in Lira City. Guided and mentored by Sedrick Otolo, Bodo Desderio, Patrick Okello, and the entire Kakebe Technologies team, these innovators are building digital solutions that transform communities and inspire the future of technology in Uganda."
+    />
+
+    <!--=====META KEYWORDS (SEO)=======-->
+    <meta
+      name="keywords"
+      content="Kakebe Technologies, Kakebe Tech, Innovators Database, Northern Uganda, Lira City, Lango Innovators, Sedrick Otolo, Bodo Desderio, Patrick Okello, Youth Innovation Uganda, Tech Mentorship, Startup Ecosystem, Kakebe Hub, Uganda Innovators"
+    />
+
+    <!--=====OG TAGS (SOCIAL SHARING)=======-->
+    <meta
+      property="og:title"
+      content="Innovators Database | Kakebe Technologies Ltd – Northern Uganda"
+    />
+    <meta
+      property="og:description"
+      content="Meet the innovators from Lira City and Northern Uganda mentored by Sedrick Otolo, Bodo Desderio, and Patrick Okello at Kakebe Technologies Ltd."
+    />
+    <meta
+      property="og:image"
+      content="https://www.kakebe.tech/assets/img/preview/innovators-database.jpg"
+    />
+    <meta property="og:url" content="https://www.kakebe.tech/innovators.html" />
+    <meta property="og:type" content="website" />
+
+    <!--=====TWITTER CARD=======-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Innovators Database | Kakebe Technologies Ltd"
+    />
+    <meta
+      name="twitter:description"
+      content="Showcasing innovators from Northern Uganda mentored by Sedrick Otolo, Bodo Desderio, and Patrick Okello."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.kakebe.tech/assets/img/preview/innovators-database.jpg"
+    />
+
+    <!--=====CSS=======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* header background style */
+      .header-area {
+        background: linear-gradient(90deg, #212529, #000000);
+      }
+
+      /* Bordered card variant */
+      .innovator-card--bordered {
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+      }
+
+      /* Blue info line */
+      .info-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        align-items: center;
+        margin-top: 6px;
+        color: #0f3b79; /* deep blue text */
+        font-size: 14px;
+      }
+      .info-line .info-chip {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        line-height: 1.4;
+      }
+      .info-line .divider {
+        color: #1d4ed8;
+      } /* blue divider dot */
+
+      /* Tiny inline progress bar */
+      .microbar {
+        display: inline-block;
+        width: 70px;
+        height: 6px;
+        border-radius: 999px;
+        background: #e6efff; /* pale blue track */
+        overflow: hidden;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+      .microbar-fill {
+        display: block;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          #1d4ed8,
+          #60a5fa
+        ); /* blue gradient fill */
+        transition: width 0.4s ease;
+      }
+
+      /* Brand-styled ghost button with nice border */
+      .ghost-btn--brand {
+        border: 2px solid #ff0000; /* Kakebe red */
+        color: #111827;
+        padding: 10px 16px;
+        border-radius: 10px;
+        font-weight: 700;
+      }
+      .ghost-btn--brand:hover {
+        background: #ff0000;
+        color: #fff;
+      }
+
+      /* Ensure the media is clearly landscape and crops nicely */
+      .innovator-card .card-media {
+        aspect-ratio: 16/9;
+      }
+      .innovator-card .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .innovator-card .stage-badge {
+        padding: 15px 15px 10px 15px;
+      }
+      .innovator-card .card-body {
+        padding: 0 15px 15px 15px;
+      }
+    </style>
+
+    <!--=====JQUERY=======-->
+    <script src="assets/js/jquery-3-7-1.min.js"></script>
+  </head>
+  <body class="body tg-heading-subheading animation-style3">
+    <!--=====progress END=======-->
+
+    <div class="paginacontainer">
+      <div class="progress-wrap">
+        <svg
+          class="progress-circle svg-content"
+          width="100%"
+          height="100%"
+          viewBox="-1 -1 102 102"
+        >
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+      </div>
+    </div>
+
+    <!--=====progress END=======-->
+
+    <header id="header">
+      <div class="header-inner shadow">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img
+                src="assets/img/logo/logo.png"
+                alt="Logo"
+                class="logo-img me-2"
+              />
+            </a>
+
+            <!-- Desktop Nav (only visible on large screens) -->
+            <ul
+              class="navbar-nav nav-links d-none d-lg-flex justify-content-center flex-grow-1 gap-4"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#service"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="team.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="innovators.html"
+                  >Innovators</a
+                >
+              </li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <a class="theme-btn16 d-none d-lg-block" href="contact.html"
+              >Get in Touch
+              <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span
+              ><span class="arrow2"
+                ><i class="fa-solid fa-arrow-right"></i></span
+            ></a>
+
+            <!-- Mobile Toggle -->
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Nav: Only visible below lg -->
+          <div class="collapse d-lg-none w-100" id="mobileNav">
+            <ul
+              class="navbar-nav mt-3 justify-content-center align-items-center text-center mx-auto"
+            >
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="innovators.html">Innovators</a>
+              </li>
+              <li class="nav-item">
+                <a class="theme-btn16 mt-2" href="index.html#contact"
+                  >Get in Touch ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!--=====HEADER END=======-->
+
+    <!--=====HERO AREA START=======-->
+
+    <div class="common-hero">
+      <div class="container">
+        <div class="row align-items-center text-center">
+          <div class="col-lg-8 m-auto">
+            <div class="main-heading">
+              <h1>Meet Innovators</h1>
+              <div class="space16"></div>
+              <span class="span"
+                ><img src="assets/img/icons/span1.png" alt="" />
+                <a href="index.html">Home</a>
+                <span class="arrow"
+                  ><i class="fa-regular fa-angle-right"></i
+                ></span>
+                Innovators</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--=====HERO AREA END=======-->
+
+    <div class="space100"></div>
+
+    <!--=====CONTACT AREA START=======-->
+
+    <div class="contact-page">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8 m-auto text-center">
+            <div class="heading1">
+              <h2>Innovators from Lango, Northern Uganda</h2>
+              <div class="space16"></div>
+              <p>
+                Discover youth-led projects mentored by Kakebe
+                Technologies—ready for investors, partners, and government
+                support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Innovator Detail (hidden) ===== -->
+        <div id="innovator-detail" class="d-none">
+          <div id="innovator-message" class="mb-4"></div>
+          <div id="innovator-profile"></div>
+        </div>
+
+        <!-- ===== Innovators Cards Section ===== -->
+        <div class="row g-4" id="innovators-container">
+          <!-- Card 1: Smart Farm Advisor -->
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="innovator-card innovator-card--bordered">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                  alt="Smart Farm Advisor – Smart farming innovation in Lango region"
+                />
+                <span
+                  class="stage-badge stage-deployed"
+                  aria-label="Project Stage: Deployed"
+                  >Deployed</span
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="project-title">Smart Farm Advisor</h5>
+                <p class="project-blurb">
+                  Smart Farm Advisor delivers AI-powered agronomy guidance using
+                  satellite data and local weather insights to help Lango
+                  smallholder farmers choose suitable crops, optimize inputs,
+                  and achieve sustainable yields.
+                </p>
+                <div class="info-line" aria-label="Project details">
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-user"></i> Team: Aromo Joan &amp;
+                    Okello Peter</span
+                  >
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-rocket"></i> Maturity:
+                    <strong>10%</strong>
+                    <span
+                      class="microbar"
+                      role="progressbar"
+                      aria-valuenow="10"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="microbar-fill" style="width: 10%"></span>
+                    </span>
+                  </span>
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-flag-checkered"></i> Stage:
+                    <strong>Deployed</strong></span
+                  >
+                </div>
+                <div class="card-actions mt-3">
+                  <a
+                    class="ghost-btn ghost-btn--brand"
+                    href="mailto:service@kakebe.tech?subject=Interest%20in%20Smart%20Farm%20Advisor"
+                    >Reach Out</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: MamaCare Card -->
+          <div class="col-md-6 col-lg-4">
+            <article class="innovator-card innovator-card--bordered">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                  alt="MamaCare Card – Maternal health innovation"
+                />
+                <span
+                  class="stage-badge stage-intermediate"
+                  aria-label="Project Stage: Intermediate"
+                  >Intermediate</span
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="project-title">MamaCare Card</h5>
+                <p class="project-blurb">
+                  MamaCare Card digitizes maternal health records, linking
+                  mothers to clinics for regular check-ups, benefits tracking,
+                  and emergency referral support to save lives and reduce
+                  maternal risks.
+                </p>
+                <div class="info-line" aria-label="Project details">
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-user"></i> Team: Akullo Patience
+                    &amp; Anyeko Dan</span
+                  >
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-rocket"></i> Maturity:
+                    <strong>45%</strong>
+                    <span
+                      class="microbar"
+                      role="progressbar"
+                      aria-valuenow="45"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="microbar-fill" style="width: 45%"></span>
+                    </span>
+                  </span>
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-flag-checkered"></i> Stage:
+                    <strong>Intermediate</strong></span
+                  >
+                </div>
+                <div class="card-actions mt-3">
+                  <a
+                    class="ghost-btn ghost-btn--brand"
+                    href="mailto:service@kakebe.tech?subject=Interest%20in%20MamaCare%20Card"
+                    >Reach Out</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: STEMBridge -->
+          <div class="col-md-6 col-lg-4">
+            <article class="innovator-card innovator-card--bordered">
+              <div class="card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                  alt="STEMBridge – Youth innovation and education project"
+                />
+                <span
+                  class="stage-badge stage-beginner"
+                  aria-label="Project Stage: Beginner"
+                  >Beginner</span
+                >
+              </div>
+              <div class="card-body">
+                <h5 class="project-title">STEMBridge</h5>
+                <p class="project-blurb">
+                  STEMBridge connects schools to innovation challenges,
+                  empowering students to learn robotics, coding, and design
+                  thinking while bridging digital literacy gaps in rural Uganda
+                  through hands-on projects.
+                </p>
+                <div class="info-line" aria-label="Project details">
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-user"></i> Team: Odongo Sam &amp;
+                    Ayaa Rita</span
+                  >
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-rocket"></i> Maturity:
+                    <strong>25%</strong>
+                    <span
+                      class="microbar"
+                      role="progressbar"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <span class="microbar-fill" style="width: 25%"></span>
+                    </span>
+                  </span>
+                  <span class="divider">•</span>
+                  <span class="info-chip"
+                    ><i class="fa-solid fa-flag-checkered"></i> Stage:
+                    <strong>Beginner</strong></span
+                  >
+                </div>
+                <div class="card-actions mt-3">
+                  <a
+                    class="ghost-btn ghost-btn--brand"
+                    href="mailto:service@kakebe.tech?subject=Interest%20in%20STEMBridge"
+                    >Reach Out</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!--=====CONACT AREA END=======-->
+      <div class="space100"></div>
+
+      <!--===== FOOTER AREA START =======-->
+      <div class="footer2 _relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="single-footer-items footer-logo-area">
+                <div class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="assets/img/logo/logo.png"
+                      alt="Kakebe Technologies"
+                  /></a>
+                </div>
+                <div class="space20"></div>
+                <div class="heading2">
+                  <p>
+                    Kakebe Technologies is a youth-led IT company transforming
+                    Northern Uganda through innovative digital solutions and
+                    youth empowerment.
+                  </p>
+                </div>
+                <ul class="social-icon">
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/kakebe-technologies"
+                      ><i class="fa-brands fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kakebetech"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/KaKebeTechnologies"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg col-md-6 col-12">
+              <div class="single-footer-items">
+                <h3>Our Services</h3>
+                <ul class="menu-list">
+                  <li><a href="index.html#service">Software Development</a></li>
+                  <li><a href="index.html#service">Digital Marketing</a></li>
+                  <li><a href="index.html#service">Robotics & AI</a></li>
+                  <li><a href="index.html#service">Cybersecurity</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg col-md-6 col-12">
+              <div class="single-footer-items pl-5">
+                <h3>Useful Links</h3>
+                <ul class="menu-list">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="index.html#service">Services</a></li>
+                  <li><a href="index.html#products">Products</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer-items">
+                <h3>Contact Us</h3>
+                <div class="contact-box">
+                  <div class="icon">
+                    <img src="assets/img/icons/footer1-icon1.png" alt="" />
+                  </div>
+                  <div class="pera">
+                    <a href="tel:+256777676206">+256 777 676 206</a>
+                  </div>
+                </div>
+                <div class="contact-box">
+                  <div class="icon">
+                    <img src="assets/img/icons/footer1-icon2.png" alt="" />
+                  </div>
+                  <div class="pera">
+                    <a href="tel:+256780286800">+256 3932498450</a>
+                  </div>
+                </div>
+                <div class="contact-box">
+                  <div class="icon">
+                    <img src="assets/img/icons/footer1-icon3.png" alt="" />
+                  </div>
+                  <div class="pera">
+                    <a href="mailto:service@kakebe.tech">service@kakebe.tech</a>
+                  </div>
+                </div>
+                <div class="contact-box">
+                  <div class="icon">
+                    <img src="assets/img/icons/footer1-icon4.png" alt="" />
+                  </div>
+                  <div class="pera">
+                    <a href="https://www.kakebe.tech">www.kakebe.tech</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="space70"></div>
+        </div>
+        <div class="copyright-area _relative">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-5">
+                <div class="copyright">
+                  <p>
+                    Copyright @<span id="year"></span> Kakebe Technologies. All
+                    Rights Reserved
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="copyright right-area">
+                  <a href="#">Terms & Conditions</a>
+                  <a href="#">Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+      <!--===== FOOTER AREA END =======-->
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/aos.js"></script>
+      <script src="assets/js/fontawesome.js"></script>
+      <script src="assets/js/gsap.min.js"></script>
+      <script src="assets/js/ScrollTrigger.min.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/script.js"></script>
+      <script>
+        // Remove layout shift as soon as Font Awesome finishes loading
+        document.addEventListener('DOMContentLoaded', () => {
+          // Font Awesome 6 triggers this event when ready
+          document.documentElement.classList.add('fas-loaded', 'fab-loaded');
+        });
+      </script>
+    </div>
+  </body>
+</html>

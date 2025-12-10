@@ -1,0 +1,475 @@
+@use '../utils' as *;
+
+  /*
+ ::::::::::::::::::::::::::
+  PROHECT AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+// === project sytle 1 ===
+
+.project {
+  background-color: var(--ztc-bg-bg-3);
+
+  .project-slider {
+    margin-top: 30px;
+
+    .owl-item.active.center {
+  
+        .single-slider {
+          .heading {
+            opacity: 1;
+            transition: all .4s;
+            transform: scale(1);
+          }
+        }
+    }
+    .single-slider {
+      margin: 0px 15px;
+      position: relative;
+      overflow: hidden;
+      
+      .slider-img {
+        img {
+          border-radius: 7px;
+        }
+      }
+
+      .heading {
+        background: var(--ztc-bg-bg-1);
+        border-radius: 7px;
+        padding: 20px;
+        position: absolute;
+        bottom: 20px;
+        margin: 0px 20px;
+        opacity: 0;
+        transition: all .4s;
+        transform: scale(0.5);
+
+        h3 {
+          a {
+            display: inline-block;
+            font-size: var(--f-fs-font-fs20);
+            line-height: var(--f-fs-font-fs28);
+            font-weight: var(--f-fw-blod);
+            color: var(--ztc-text-text-1);
+
+            &:hover {
+              color: var(--ztc-bg-main-bg-1);
+              transition: all .4s;
+            }
+
+          }
+        }
+      }
+
+      .learn {
+        transition: all .4s;
+        color: var(--ztc-text-text-1);
+        font-size: var(--f-fs-font-fs18);
+        line-height: var(--f-fs-font-fs18);
+        font-weight: var(--f-fw-blod);
+        display: inline-block;
+        margin-top: 24px;
+  
+        span {
+          display: inline-block;
+          transform: rotate(-45deg);
+        }
+  
+        &:hover {
+          color: var(--ztc-bg-main-bg-1);
+          transition: all .4s;
+        }
+      }
+
+    }
+
+    .owl-nav {
+      button {
+        background: var(--ztc-bg-bg-2);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        transition: all .4s;
+
+        &:hover {
+          color: var(--ztc-text-text-2);
+          background: var(--ztc-bg-main-bg-1);
+        }
+      }
+
+      button.owl-prev {
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        margin-top: -20px;
+      }
+
+      button.owl-next {
+        position: absolute;
+        top: 50%;
+        right: -40px;
+        margin-top: -20px;
+      }
+    }
+  }
+}
+
+
+// === project sytle 1 ===
+
+// === project sytle 3 ===
+
+.project3 {
+  background-color: var(--ztc-bg-bg-6);
+
+  .main-image-area {
+    position: relative;
+    margin-top: 30px;
+    overflow-y: hidden;
+
+    .image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .heading-area {
+      position: absolute;
+      z-index: 3;
+      bottom: 24px;
+      margin: 0px 30px;
+      width: 90%;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      visibility: hidden;
+      transform: scale(0) translateY(40px);
+      transition: all .4s;
+
+      .heading {
+        p {
+          color: var(--ztc-text-text-2);
+          font-size: var(--f-fs-font-fs16);
+          line-height: var(--f-fs-font-fs16);
+          font-weight: var(--f-fw-regular);
+          padding-bottom: 16px;
+        }
+        h4 {
+          a {
+            display: inline-block;
+            color: var(--ztc-text-text-2);
+            font-size: var(--f-fs-font-fs20);
+            line-height: var(--f-fs-font-fs28);
+            font-weight: var(--f-fw-blod);
+          }
+        }
+      }
+
+      .arrow {
+        a {
+          display: inline-block;
+          height: 48px;
+          width: 48px;
+          line-height: 48px;
+          background-color: var(--ztc-bg-main-bg-3);
+          color: var(--ztc-text-text-2);
+          text-align: center;
+          border-radius: 50%;
+          transform: rotate(-45deg);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(14.1000003815px);
+        backdrop-filter: blur(14.1000003815px);
+        z-index: -1;
+        border-radius: 7px;
+      }
+
+
+    }
+
+    .heading-area.heading-area2 {
+      margin-right: 50px !important;
+      left: -15px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 7px;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all .4s;
+      background: linear-gradient(187deg, rgba(0, 0, 0, 0.00) 49.94%, rgba(0, 0, 0, 0.80) 72.55%), url(<path-to-image>) rgba(211, 211, 211, 0) 50% / cover no-repeat;
+    }
+
+    &:hover {
+      .heading-area {
+        visibility: visible;
+        transform: scale(1) translateY(0);
+        transition: all .4s;
+      }
+      &::before {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all .4s;
+      }
+    }
+
+    &.active {
+      .heading-area {
+        visibility: visible;
+        transform: scale(1) translateY(0);
+        transition: all .4s;
+      }
+      &::before {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all .4s;
+      }
+    }
+  }
+
+  .image2 {
+
+    img {
+      width: 100%;
+      border-radius: 7px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      button {
+        color: var(--ztc-bg-main-bg-3);
+        font-weight: var(--f-fw-semibold);
+        font-size: var(--f-fs-font-fs16);
+        line-height: var(--f-fs-font-fs16);
+        padding: 12px 20px;
+        border-radius: 7px;
+        margin: 10px 0px;
+        background-color: var(--ztc-text-text-2);
+      }
+
+      button.active {
+        background: var(--ztc-bg-main-bg-3);
+      }
+    }
+  }
+}
+
+// === project sytle 3 ===
+
+// === project detials style ===
+
+.project-details-box {
+  background-color: #F8F9FA;
+  border-radius: 7px;
+  margin-top: 30px;
+  padding: 24px;
+  transition: all .4s;
+
+  &:hover {
+    transition: all .4s;
+    transform: translateY(-5px);
+  }
+}
+
+.get-started-box {
+  background-color: #0E38B1;
+  border-radius: 4px;
+  padding: 24px;
+
+  h3 {
+    font-size: var(--f-fs-font-fs32);
+    line-height: var(--f-fs-font-fs32);
+    font-weight: var(--f-fw-semibold);
+    color: #fff;
+  }
+
+  p {
+    font-size: var(--f-fs-font-fs16);
+    line-height: var(--f-fs-font-fs28);
+    font-weight: var(--f-fw-regular);
+    color: #fff;
+  }
+}
+
+// === project details style ===
+
+// === project6 style ===
+
+.project6 {
+  position: relative;
+  .project6-slider {
+    margin-top: 60px;
+
+    .single-slider {
+      position: relative;
+      margin: 0px 10px;
+
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .hover-area {
+        position: absolute;
+        bottom: 24px;
+        margin: 0px 24px;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 320px;
+
+        .heading {
+          p {
+            display: inline-block;
+            color: var(--Home-Page-3-white-colors, #FFF);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 100% */
+            background-color: #ffffff1f;
+            padding: 8px 11px;
+            border-radius: 4px;
+          }
+          h5 {
+            a {
+              display: inline-block;
+              color: var(--Home-Page-3-white-colors, #FFF);
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 20px; /* 100% */
+              padding-top: 16px;
+            }
+          }
+        }
+        .learn-btn {
+          a {
+            display: inline-block;
+            height: 44px;
+            width: 44px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            right: -45px;
+            bottom: 10px;
+            line-height: 44px;
+            text-align: center;
+            color: #fff;
+            transform: rotate(-45deg);
+            @media #{$xs} {
+              right: 30px;
+            }
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 4.6%, #000 100%);
+        z-index: 0;
+        border-radius: 4px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(3, 5, 13, 0.30) 4.6%, #FA6444 100%);
+        z-index: 1;
+        border-radius: 4px;
+        opacity: 0;
+      }
+      &.slick-current.slick-active {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    
+    margin: 0;
+    padding: 2rem 0 0 0;
+    
+    list-style-type: none;
+    
+      li {
+        margin: 0 0.25rem;
+      }
+    
+      button {
+        display: block;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border: none;
+        border-radius: 100%;
+        background-color: #f076763a;
+        text-indent: -9999px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          height: 18px;
+          width: 18px;
+          border: 1px solid #FA6444;
+          border-radius: 50%;
+          opacity: 0;
+        }
+      }
+    
+      li.slick-active button {
+        background-color: #FA6444;
+        &::after {
+          opacity: 1;
+        }
+      }
+  }
+
+}
+
+// === project6 style ===
+
+
+  /*
+ ::::::::::::::::::::::::::
+  PROHECT AREA CSS
+ ::::::::::::::::::::::::::
+ */

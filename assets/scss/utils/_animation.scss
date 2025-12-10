@@ -1,0 +1,214 @@
+
+/*
+ ::::::::::::::::::::::::::
+  ANIMATION AREA CSS
+ ::::::::::::::::::::::::::
+ */
+
+ @keyframes shape-animation1 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+  }
+
+  @keyframes shape-animation2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(30px);
+    }
+  }
+
+  @keyframes shape-animation3 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+  }
+
+  @keyframes shape-animation4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1000deg);
+    }
+  }
+
+
+  @keyframes animate1 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+  }
+
+  @keyframes animate3 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+  }
+
+  @keyframes animate4 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+  }
+
+  @keyframes animate5 {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+  @keyframes animate6 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+  }
+
+  @keyframes round-circle2 {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
+  }
+
+
+  .round-circle2 {
+    position: relative;
+    animation-name: round-circle2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+.shape-animation1 {
+position: relative;
+animation-name: shape-animation1;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
+}
+
+.shape-animation2 {
+position: relative;
+animation-name: shape-animation2;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+
+.shape-animation3 {
+position: relative;
+animation-name: shape-animation3;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in-out;
+}
+
+.shape-animation4 {
+    position: relative;
+    animation-name: shape-animation4;
+    animation-duration: 62s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.animate1 {
+    position: relative;
+    animation-name: animate1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animate2 {
+    position: relative;
+    animation-name: animate2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animate3 {
+    position: relative;
+    animation-name: animate3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animate4 {
+    position: relative;
+    animation-name: animate4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animate5 {
+    position: relative;
+    animation-name: animate5;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.animate6 {
+    position: relative;
+    animation-name: animate6;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/*
+::::::::::::::::::::::::::
+ANIMATION AREA CSS
+::::::::::::::::::::::::::
+*/

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Loading... | Kakebe Innovators</title>
+
+    <!--=====FAVICON=======-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/logo/site.webmanifest">
+
+    <!--=====CSS=======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      main {
+        margin-top: 100px;
+      }
+      .innovator-hero {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: white;
+        margin-top: 100px;
+        padding: 4rem 0;
+      }
+      .member-card {
+        transition: transform 0.3s;
+      }
+      .member-card:hover {
+        transform: translateY(-8px);
+      }
+      .gallery-img {
+        height: 180px;
+        object-fit: cover;
+      }
+    </style>
+
+    <script src="assets/js/jquery-3-7-1.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-inner shadow">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <img
+                src="assets/img/logo/logo.png"
+                alt="Logo"
+                class="logo-img me-2"
+              />
+            </a>
+
+            <!-- Desktop Nav (only visible on large screens) -->
+            <ul
+              class="navbar-nav nav-links d-none d-lg-flex justify-content-center flex-grow-1 gap-4"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#service"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="index.html#products"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="team.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link list-group-item list-group-item-action"
+                  href="innovators.html"
+                  >Innovators</a
+                >
+              </li>
+            </ul>
+
+            <!-- Desktop CTA -->
+            <a class="theme-btn16 d-none d-lg-block" href="contact.html"
+              >Get in Touch
+              <span class="arrow1"><i class="fa-solid fa-arrow-right"></i></span
+              ><span class="arrow2"
+                ><i class="fa-solid fa-arrow-right"></i></span
+            ></a>
+
+            <!-- Mobile Toggle -->
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mobileNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <!-- Mobile Nav: Only visible below lg -->
+          <div class="collapse d-lg-none w-100" id="mobileNav">
+            <ul
+              class="navbar-nav mt-3 justify-content-center align-items-center text-center mx-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#products">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="innovators.html">Innovators</a>
+              </li>
+              <li class="nav-item">
+                <a class="theme-btn16 mt-2" href="index.html#contact"
+                  >Get in Touch ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container py-5">
+      <div id="innovator-content">
+        <div class="text-center py-5">
+          <div
+            class="spinner-border text-primary"
+            style="width: 3rem; height: 3rem"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <!--===== FOOTER AREA START =======-->
+    <div class="footer2 _relative" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single-footer-items footer-logo-area">
+              <div class="footer-logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/img/logo/logo.png"
+                    alt="Kakebe Technologies"
+                /></a>
+              </div>
+              <div class="space20"></div>
+              <div class="heading2">
+                <p>
+                  Kakebe Technologies is a youth-led IT company transforming
+                  Northern Uganda through innovative digital solutions and youth
+                  empowerment.
+                </p>
+              </div>
+              <ul class="social-icon">
+                <li>
+                  <a href="https://www.linkedin.com/company/kakebe-technologies"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/kakebetech"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/KaKebeTechnologies"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Our Services</h3>
+              <ul class="menu-list">
+                <li><a href="index.html#service">Software Development</a></li>
+                <li><a href="index.html#service">Digital Marketing</a></li>
+                <li><a href="index.html#service">Robotics & AI</a></li>
+                <li><a href="index.html#service">Cybersecurity</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="single-footer-items pl-5">
+              <h3>Useful Links</h3>
+              <ul class="menu-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="single-footer-items">
+              <h3>Contact Us</h3>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon1.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="phone"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+                  <!-- <img src="assets/img/icons/footer1-icon2.png" alt="" /> -->
+                </div>
+                <div class="pera">
+                  <a id="whatsapp"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon3.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="contact-email"></a>
+                </div>
+              </div>
+              <div class="contact-box">
+                <div class="icon">
+                  <img src="assets/img/icons/footer1-icon4.png" alt="" />
+                </div>
+                <div class="pera">
+                  <a id="website"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space70"></div>
+      </div>
+      <div class="copyright-area _relative">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <div class="copyright">
+                <p>
+                  Copyright @<span id="year"></span> Kakebe Technologies. All
+                  Rights Reserved
+                </p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="copyright right-area">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+    <!--===== FOOTER AREA END =======-->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      // Main function — runs on innovator.html
+      function renderInnovatorPage() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const innovatorName = urlParams.get("name");
+        const memberName = urlParams.get("member");
+
+        const content = getEl("innovator-content");
+        const title = document.getElementById("page-title");
+
+        if (!innovatorName) {
+          content.innerHTML = `<h2>No innovator selected</h2><a href="innovators.html">← Back to Innovators</a>`;
+          return;
+        }
+
+        if (memberName) {
+          renderTeamMemberProfile(innovatorName, memberName);
+          return;
+        }
+
+        // Fetch single innovator
+        const encoded = encodeURIComponent(innovatorName.replace(/-/g, " "));
+        const url = `${API_BASE_URL}/api/innovators?filters[name][$eqi]=${encoded}&populate[0]=image&populate[1]=gallery&populate[2]=teamMembers.avatar`;
+
+        safeFetch(url, { cacheKey: `innovator_${encoded}`, ttl: CACHE_TTL_MS, useCache: CACHE_ENABLED })
+          .then((res) => {
+            if (!res?.data?.[0]) throw new Error("Not found");
+            const inv = res.data[0];
+            console.log(inv.description);
+
+            title.textContent = `${inv.name} | Kakebe Innovators`;
+
+            content.innerHTML = `
+            <section class="innovator-hero text-center">
+              <div class="container">
+                <h1 class="display-5 fw-bold">${inv.name}</h1>
+                <p class="lead opacity-90">${
+                  inv.tagline || "Youth-led innovation from Northern Uganda"
+                }</p>
+              </div>
+            </section>
+
+            <div class="row mt-5">
+              <div class="col-lg-8">
+                <img src="${
+                  getImageUrl(inv.image, "large") ||
+                  "assets/img/innovators-placeholder.jpg"
+                }" 
+                     class="img-fluid rounded shadow" alt="${inv.name}">
+                <div class="mt-4" id="innovator-description-placeholder"></div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card border-0 shadow">
+                  <div class="card-body">
+                    <h5>Project Details</h5>
+                    <hr>
+                    <p><strong>Stage:</strong> ${inv.stage || "Beginner"}</p>
+                    <p><strong>Maturity:</strong> ${inv.maturity || 0}% 
+                      <div class="progress mt-2" style="height:8px;">
+                        <div class="progress-bar bg-success" style="width:${
+                          inv.maturity
+                        }%"></div>
+                      </div>
+                    </p>
+                    <p><strong>Contact:</strong> <a href="mailto:service@kakebe.tech">service@kakebe.tech</a></p>
+                  </div>
+                </div>
+
+                ${
+                  inv.gallery?.length
+                    ? `
+                  <div class="mt-4">
+                    <h5>Gallery</h5>
+                    <div class="row g-3">
+                      ${inv.gallery
+                        .map(
+                          (g) => `
+                        <div class="col-6">
+                          <img src="${getImageUrl(g.image, "small")}" 
+                               class="img-fluid rounded gallery-img" 
+                               onclick="this.requestFullscreen()">
+                        </div>
+                      `
+                        )
+                        .join("")}
+                    </div>
+                  </div>
+                `
+                    : ""
+                }
+              </div>
+            </div>
+
+            <section class="mt-5">
+              <h3>Meet the Team</h3>
+              <div class="row g-4">
+                ${
+                  inv.teamMembers
+                    ?.map(
+                      (member) => `
+                  <div class="col-md-6 col-lg-4">
+                    <div class="card member-card border-0 shadow h-100">
+                      <div class="card-body text-center">
+                        <img src="${
+                          getImageUrl(member.avatar, "small") ||
+                          "assets/img/default-avatar.jpg"
+                        }" 
+                             class="rounded-circle mb-3" width="80" height="80" style="object-fit:cover;">
+                        <h6>${member.name}</h6>
+                        <p class="text-muted small">${
+                          member.role || "Team Member"
+                        }</p>
+                        <a href="?name=${innovatorName}&member=${member.name
+                        .replace(/\s+/g, "-")
+                        .toLowerCase()}" 
+                           class="btn btn-sm btn-outline-primary">View Profile</a>
+                      </div>
+                    </div>
+                  </div>
+                `
+                    )
+                    .join("") || "<p>No team members listed.</p>"
+                }
+              </div>
+            </section>
+
+            <div class="text-center mt-5">
+              <a href="innovators.html" class="btn btn-lg btn-outline-dark">← All Innovators</a>
+            </div>
+          `;
+
+          // Safely render rich text into the placeholder (do not inject DOM into a string)
+          const descHolder = document.getElementById('innovator-description-placeholder');
+          if (descHolder) {
+            // use the safe renderer which returns nodes and appends them
+            injectRichText(descHolder, inv.description || []);
+          }
+          })
+          .catch((err) => {
+            content.innerHTML = `<h3>Not Found</h3><p>Innovator "${innovatorName}" not found.</p><a href="innovators.html">← Back</a>`;
+            console.error("Error loading innovator: ", err);
+          });
+      }
+
+      // Render team member modal/profile
+      function renderTeamMemberProfile(innovatorName, memberName) {
+        const decoded = memberName.replace(/-/g, " ");
+        // You can extend this to fetch from a separate "innovator-members" collection
+        // For now, we'll just show a nice modal
+        document.getElementById("innovator-content").innerHTML = `
+        <div class="text-center py-5">
+          <h2>${decoded}</h2>
+          <p>Team member profile coming soon!</p>
+          <a href="?name=${innovatorName}" class="btn btn-primary">← Back to ${innovatorName.replace(
+          /-/g,
+          " "
+        )}</a>
+        </div>
+      `;
+      }
+
+      document.addEventListener("DOMContentLoaded", renderInnovatorPage);
+    </script>
+  </body>
+</html>

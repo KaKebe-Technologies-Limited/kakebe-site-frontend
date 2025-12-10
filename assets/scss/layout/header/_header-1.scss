@@ -1,0 +1,72 @@
+@use '../../utils/' as * ;
+
+/*
+::::::::::::::::::::::::::
+ HEADER AREA CSS
+::::::::::::::::::::::::::
+*/
+
+//==== header 1 ===
+
+.header-top {
+    padding: 16px 0;
+    text-align: center;
+    background-color: var(--ztc-bg-main-bg-1);
+    .pera {
+        p {
+            font-size: var(--f-fs-font-fs16);
+            font-weight: var(--f-fw-blod);
+            color: var(--ztc-text-text-2);
+            line-height: var(--f-fs-font-fs16);
+            img {
+                margin-top: -4px;
+                margin-right: 2px;
+            }
+        }
+    }
+}
+
+.header-area.header-area1 {
+    .header1-buttons {
+        display: flex;
+        align-items: center;
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+            .icon {
+                height: 38px;
+                width: 38px;
+                text-align: center;
+                line-height: 38px;
+                border-radius: 50%;
+                background-color: var(--ztc-bg-bg-2);
+                margin-right: 10px;
+            }
+
+            .headding {
+                p {
+                    font-size: 12px;
+                    line-height: 12px;
+                    color: var(--ztc-text-pera-text-1);
+                }
+                a {
+                    font-size: var(--f-fs-font-fs16);
+                    line-height: var(--f-fs-font-fs16);
+                    font-weight: var(--f-fw-blod);
+                    color: var(--ztc-text-text-1);
+                    display: inline-block;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+//==== header 1 ===
+
+/*
+::::::::::::::::::::::::::
+ HEADER AREA CSS
+::::::::::::::::::::::::::
+*/
