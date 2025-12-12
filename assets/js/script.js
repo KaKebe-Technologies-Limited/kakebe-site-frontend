@@ -3,7 +3,7 @@
    - Usage: include on any page; functions will gracefully skip missing elements
 */
 
-const API_BASE_URL = 'https://kakebe.tech'; // change to deployed URL when needed
+const API_BASE_URL = 'https://kakebe-site-backend.onrender.com'; // change to deployed URL when needed
 
 /* ---------- CONFIG ---------- */
 const CACHE_ENABLED = true;        // set false to disable caching
@@ -72,19 +72,19 @@ function safeFetch(url, { cacheKey = null, ttl = CACHE_TTL_MS, useCache = CACHE_
 function getImageUrl(mediaObj = null, sizeKey = null) {
   // mediaObj may be:
   // - null
-  // - { url: '/uploads/..' } (older/simple)
+  // - { url: 'https://res.cloudinary.com/..' } (older/simple)
   // - { data: { attributes: { url: '/uploads/..', formats: { small: {url:...} }}}} (v4)
   // - { formats: { small: {url: '/...'} }, url: '/uploads/..' } (sometimes direct)
   try {
     if (!mediaObj) return null;
 
-    // case: direct { url: '/uploads/..' }
+    // case: direct { url: 'https://res.cloudinary.com/..' }
     if (typeof mediaObj.url === 'string') {
       // if formats present, prefer formats[sizeKey]
       if (mediaObj.formats && sizeKey && mediaObj.formats[sizeKey] && mediaObj.formats[sizeKey].url) {
-        return `${API_BASE_URL}${mediaObj.formats[sizeKey].url}`;
+        return `${mediaObj.formats[sizeKey].url}`;
       }
-      return `${API_BASE_URL}${mediaObj.url}`;
+      return `${mediaObj.url}`;
     }
 
     // case: Strapi v4 shape: mediaObj.data.attributes
@@ -985,7 +985,7 @@ function populateServices() {
 
       services.forEach(svcRaw => {
         const info = svcRaw.attributes ? { id: svcRaw.id, ...svcRaw.attributes } : svcRaw;
-        const icon1Url = getImageUrl(info.icon1) || `${API_BASE_URL}/uploads/default_icon.png`;
+        const icon1Url = getImageUrl(info.icon) || `${API_BASE_URL}/uploads/default_icon.png`;
         const desc = info.description || '';
 
         const serve = document.createElement('div');
