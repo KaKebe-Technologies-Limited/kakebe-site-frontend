@@ -3,7 +3,7 @@
    - Usage: include on any page; functions will gracefully skip missing elements
 */
 
-const API_BASE_URL = 'http://localhost:1337'; // change to deployed URL when needed
+const API_BASE_URL = 'https://kakebe.tech'; // change to deployed URL when needed
 
 /* ---------- CONFIG ---------- */
 const CACHE_ENABLED = true;        // set false to disable caching
