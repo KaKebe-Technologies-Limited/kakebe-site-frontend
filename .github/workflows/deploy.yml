@@ -1,0 +1,23 @@
+name: Deploy to Namecheap
+
+on:
+  push:
+    branches: [ main ]   # Change to your default branch if different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21                  # Try 21098 if 21 fails
+          protocol: ftp             # Use 'ftps' if you want encrypted
+          local-dir: ./             # Root of your site (or ./dist/ if built)
+          server-dir: /public_html/ # Target folder on Namecheap
+          dangerous-clean-slate: false  # Set true to delete old files first
